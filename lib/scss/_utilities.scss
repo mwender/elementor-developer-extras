@@ -1,0 +1,16 @@
+/* Utilities */
+.hide-desktop{
+  @media (min-width: 1200px){
+    display: none !important;
+  }
+}
+.hide-tablet{
+  @media (min-width: 768px){
+    display: none !important;
+  }
+}
+.hide-mobile{
+  @media (min-width: 320px){
+    display: none !important;
+  }
+}

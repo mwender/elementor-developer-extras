@@ -1,0 +1,43 @@
+/* Global Tweaks */
+a{
+    color: $primaryColor;
+}
+p{
+  font-weight: 300;
+}
+.elementor-widget-theme-post-content{
+    ul,ol{
+        margin-bottom: 1.5rem;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $headingFont;
+}
+
+.elementor-widget-wrap .elementor-widget-heading.elementor-widget-heading .elementor-heading-title{
+  color: darken($altColor1,60%);
+}
+
+/* Buttons */
+.elementor-button{
+  background-color: $primaryColor;
+}
+.elementor-element{
+  .elementor-button{
+    background-color: $primaryColor;
+  }
+  &.elementor-button-info .elementor-button{
+    background-color: $secondaryColor;
+  }
+  &.link-button{
+    a{
+      background-color: transparent;
+      color: $primaryColor;
+      border: none;
+      padding: 0;
+    }
+  }
+  &.elementor-button-block .elementor-button{
+    display: block;
+  }
+}

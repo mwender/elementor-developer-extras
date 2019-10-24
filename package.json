@@ -1,0 +1,30 @@
+{
+  "name": "elementor-developer-extras",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "author": "Michael Wender",
+  "config": {
+    "proxy_url": "http://localhost"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "chokidar-cli": "^1.2.2",
+    "grunt": "~0.4.5",
+    "grunt-wp-i18n": "~0.5.0",
+    "grunt-wp-readme-to-markdown": "~1.0.0",
+    "node-sass-chokidar": "^1.3.5",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3"
+  },
+  "scripts": {
+    "build-task:scss-compile": "node-sass-chokidar --source-map true lib/scss/ -o lib/css",
+    "build-task:autoprefixer": "postcss lib/css/*.css --use autoprefixer -d lib/css",
+    "development:browsersync": "browser-sync start --proxy $npm_package_config_proxy_url --files 'lib/css/*.css' 'lib/templates/*.*' 'lib/fns/*.*' 'lib/js/*.js'",
+    "development:build": "npm-run-all -p build-task:*",
+    "development:watch": "chokidar 'lib/scss/**/*.scss' -c 'npm run development:build'",
+    "production:scss-compile": "node-sass-chokidar lib/scss/ -o lib/dist --output-style compressed ",
+    "production:autoprefixer": "postcss lib/dist/*.css --no-map --use autoprefixer -d lib/dist",
+    "dev": "npm-run-all -p development:*",
+    "prod": "npm-run-all -p production:*"
+  }
+}
