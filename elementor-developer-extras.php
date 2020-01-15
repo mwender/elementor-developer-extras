@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Elementor Developer Extras
- * Plugin URI:      PLUGIN SITE HERE
+ * Plugin URI:      https://github.com/mwender/elementor-developer-extras
  * Description:     Developer tools for working with WordPress sites built with Elementor.
  * Author:          Michael Wender
  * Author URI:      https://mwender.com
